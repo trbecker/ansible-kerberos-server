@@ -45,6 +45,7 @@
 
 - name: Create initial Kerberos database
   shell: kdb5_util -P {{ master_db_pass }} create -s
+  ignore_errors: yes
 
 - name: Start Kerberos services
   service:
